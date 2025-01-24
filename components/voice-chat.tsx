@@ -116,14 +116,15 @@ export default function VoiceChat() {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-      <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4">
+    <div className="h-screen flex flex-col justify-stretch bg-white shadow-lg overflow-hidden">
+      <div className="bg-gradient-to-r from-blue-600 to-blue-500 p-4">
         <h2 className="text-white text-lg font-semibold">Voice Chat Assistant</h2>
+        <p className='text-white text-xs'>Developed By <a href='https://www.linkedin.com/in/mehdiirezakhani/' target='_blank' className='underline'>Mehdi Rezakhani</a></p>
       </div>
 
       <div
         ref={chatContainerRef}
-        className="h-[500px] overflow-y-auto p-6 space-y-6 bg-gray-50"
+        className="h-full overflow-y-auto p-6 space-y-6 bg-gray-50"
       >
         {chatState.messages.length === 0 && (
           <div className="flex flex-col items-center justify-center h-full text-gray-500">
